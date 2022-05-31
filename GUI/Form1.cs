@@ -5,6 +5,7 @@ public partial class Form1 : Form
 {
     //make actions work in any directory
     //System.Reflection.Assembly.GetEntryAssembly().Location
+    //https://medium.com/analytics-vidhya/creating-cascading-context-menus-with-the-windows-10-registry-f1cf3cd8398f
 
     public void reg(bool y_n, bool cascade, string name, string[] values, string[] actions, string location)
     {
