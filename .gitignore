@@ -35,5 +35,5 @@
 Concept.txt
 Old/
 **/.vscode/
-**/.vs/
-**/bin/
+GUI/.vs/
+GUI/bin/
