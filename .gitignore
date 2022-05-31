@@ -34,6 +34,6 @@
 # My own stuff
 Concept.txt
 Old/
-**/.vscode/
-GUI/.vs/
-GUI/bin/
+./.vscode/
+./GUI/.vs/
+./GUI/bin/
