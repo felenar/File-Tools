@@ -34,6 +34,6 @@
 # My own stuff
 Concept.txt
 Old/
-.vscode/
-.vs/
-bin/
+**/.vscode/
+**/.vs/
+**/bin/
