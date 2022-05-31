@@ -5,8 +5,7 @@ public partial class Form1 : Form
 {
     //make actions work in any directory
     //System.Reflection.Assembly.GetEntryAssembly().Location
-    //https://medium.com/analytics-vidhya/creating-cascading-context-menus-with-the-windows-10-registry-f1cf3cd8398f
-
+    
     public void reg(bool y_n, bool cascade, string name, string[] values, string[] actions, string location)
     {
         if (!y_n)
@@ -33,8 +32,10 @@ public partial class Form1 : Form
             if (cascade)
             {
                 
-                Registry.ClassesRoot.CreateSubKey(location + "\\shell\\" + name);
+                reg = Registry.ClassesRoot.CreateSubKey(location + "\\shell\\" + name);
                 Registry.ClassesRoot.CreateSubKey(location + "\\shell\\" + name + "\\shell");
+                reg.SetValue("MUIVerb", name);
+                reg.SetValue("subcommands", "");
                 for (int i = 0; i < values.Length; i++)
                 {
                     Registry.ClassesRoot.CreateSubKey(location + "\\shell\\" + name + "\\shell\\" + values[i]);
