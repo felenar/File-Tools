@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\darth\\Desktop\\Coding\\Projects\\File-Tools\\GUI\\GUI.csproj": {}
+    "C:\\Users\\darth\\Desktop\\Coding\\Projects\\File-Tools\\gui\\GUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\darth\\Desktop\\Coding\\Projects\\File-Tools\\GUI\\GUI.csproj": {
+    "C:\\Users\\darth\\Desktop\\Coding\\Projects\\File-Tools\\gui\\GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\darth\\Desktop\\Coding\\Projects\\File-Tools\\GUI\\GUI.csproj",
+        "projectUniqueName": "C:\\Users\\darth\\Desktop\\Coding\\Projects\\File-Tools\\gui\\GUI.csproj",
         "projectName": "GUI",
-        "projectPath": "C:\\Users\\darth\\Desktop\\Coding\\Projects\\File-Tools\\GUI\\GUI.csproj",
+        "projectPath": "C:\\Users\\darth\\Desktop\\Coding\\Projects\\File-Tools\\gui\\GUI.csproj",
         "packagesPath": "C:\\Users\\darth\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\darth\\Desktop\\Coding\\Projects\\File-Tools\\GUI\\obj\\",
+        "outputPath": "C:\\Users\\darth\\Desktop\\Coding\\Projects\\File-Tools\\gui\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

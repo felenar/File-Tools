@@ -3,8 +3,6 @@ namespace GUI;
 
 public partial class Form1 : Form
 {
-    //make actions work in any directory
-    //System.Reflection.Assembly.GetEntryAssembly().Location
     
     public void reg(bool y_n, bool cascade, string name, string[] values, string[] actions, string location)
     {
@@ -66,17 +64,18 @@ public partial class Form1 : Form
 
     private void yes_rmdir_Click(object sender, EventArgs e)
     {
-
+        reg(true, false, "RMDIR", null, new[] {"cmd.exe /c rmdir \"%1\" /Q /S"}, "Directory");
     }
 
     private void remove_rmdir_Click(object sender, EventArgs e)
     {
-
+        reg(false, false, "RMDIR", null, null, "Directory");
     }
 
     private void yes_copy_Click(object sender, EventArgs e)
     {
-
+        //System.Reflection.Assembly.GetEntryAssembly().Location
+        //reg(bool y_n, bool cascade, string name, string[] values, string[] actions, string location)
     }
 
     private void no_copy_Click(object sender, EventArgs e)
