@@ -1,14 +1,20 @@
 //compile with -mwindows
-/*arguments should be "1" "cut  " or "copy " "C:\...\test\" */
+/*arguments should be "cut  " or "copy " "1" "C:\...\test\" */
 #include <string>
 #include <fstream>
+#include <iostream>
 
 int main(int argc, char **argv) {
-    if(argc != 4) return 0;
-    std::ofstream file;
-    std::string filename = "slot" + std::string(argv[1]) + ".txt";
-    file.open(filename);
-    file << argv[2] + std::string(argv[3]);
-    file.close();
+    if(argv[1] == "cut  " || argv[1] == "copy ") {
+        std::ofstream file ("slot" + std::string(argv[2]) + ".txt");
+        file << argv[3] + std::string(argv[4]);
+        file.close();
+    } else if(argv[1] == "paste") { //why doesnt this work
+        std::ifstream file ("slot" + std::string(argv[2]) + ".txt");
+        std::string contents;
+        file >> contents;
+        std::cout << contents << '\n';
+        file.close();
+    }
     return 0;
 }
