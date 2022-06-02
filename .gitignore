@@ -37,4 +37,6 @@ Old/
 ./.vscode/
 ./GUI/.vs/
 ./GUI/bin/
+./sym/.vs/
+./sym/bin/
 Build/
