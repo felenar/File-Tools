@@ -7,7 +7,7 @@ public partial class Form1 : Form
     public void reg(bool y_n, bool cascade, string name, string[] values, string[] actions, string location)
     {
         if (!y_n)
-        {
+        { // remove
             if (!cascade)
             {
                 Registry.ClassesRoot.DeleteSubKey(location + "\\shell\\" + name + "\\command");
@@ -25,7 +25,7 @@ public partial class Form1 : Form
             }
         }
         else
-        {
+        { // add
             RegistryKey reg;
             if (cascade)
             {
@@ -75,6 +75,8 @@ public partial class Form1 : Form
     private void yes_copy_Click(object sender, EventArgs e)
     {
         //System.Reflection.Assembly.GetEntryAssembly().Location
+        //place gui and invis/vis executables in same directory
+        //search desktop for other notes to add, like compact
         //reg(bool y_n, bool cascade, string name, string[] values, string[] actions, string location)
     }
 
@@ -85,11 +87,13 @@ public partial class Form1 : Form
 
     private void yes_sym_Click(object sender, EventArgs e)
     {
-
+        //string location = System.Reflection.Assembly.GetEntryAssembly().Location;
+        //string dir = '\"' + location.Substring(0, location.LastIndexOf("GUI.dll")) + "sym.exe\"" + " \"%1\"";
+        //reg(true, true, "Batch Symlink", new[] {"Symlink", "Symlink but copy executables"}, new[] {dir, dir + " \"copy\""}, "Directory");
     }
 
     private void no_sym_Click(object sender, EventArgs e)
     {
-
+        //reg(false, true, "Batch Symlink", null, null, "Directory");
     }
 }

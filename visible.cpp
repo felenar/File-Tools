@@ -1,4 +1,7 @@
+#include <string>
+#include <fstream>
+
 int main(int argc, char** argv) {
-    if(argc==1) { /* look at slots*/}
+
     return 0;
 }

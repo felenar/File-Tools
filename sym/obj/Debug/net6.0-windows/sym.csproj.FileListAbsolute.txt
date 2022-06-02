@@ -1,0 +1,15 @@
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\bin\Debug\net6.0-windows\sym.exe
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\bin\Debug\net6.0-windows\sym.deps.json
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\bin\Debug\net6.0-windows\sym.runtimeconfig.json
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\bin\Debug\net6.0-windows\sym.dll
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\bin\Debug\net6.0-windows\sym.pdb
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Debug\net6.0-windows\sym.csproj.AssemblyReference.cache
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Debug\net6.0-windows\sym.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Debug\net6.0-windows\sym.AssemblyInfoInputs.cache
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Debug\net6.0-windows\sym.AssemblyInfo.cs
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Debug\net6.0-windows\sym.csproj.CoreCompileInputs.cache
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Debug\net6.0-windows\sym.dll
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Debug\net6.0-windows\refint\sym.dll
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Debug\net6.0-windows\sym.pdb
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Debug\net6.0-windows\sym.genruntimeconfig.cache
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Debug\net6.0-windows\ref\sym.dll
