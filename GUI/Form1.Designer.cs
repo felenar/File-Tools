@@ -39,11 +39,17 @@ partial class Form1
             this.remove_rmdir = new System.Windows.Forms.Button();
             this.yes_rmdir = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.no_note = new System.Windows.Forms.Button();
+            this.yes_note = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.no_compact = new System.Windows.Forms.Button();
+            this.yes_compact = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // no_sym
             // 
-            this.no_sym.Location = new System.Drawing.Point(93, 168);
+            this.no_sym.Location = new System.Drawing.Point(93, 167);
             this.no_sym.Name = "no_sym";
             this.no_sym.Size = new System.Drawing.Size(75, 23);
             this.no_sym.TabIndex = 30;
@@ -53,7 +59,7 @@ partial class Form1
             // 
             // yes_sym
             // 
-            this.yes_sym.Location = new System.Drawing.Point(12, 168);
+            this.yes_sym.Location = new System.Drawing.Point(12, 167);
             this.yes_sym.Name = "yes_sym";
             this.yes_sym.Size = new System.Drawing.Size(75, 23);
             this.yes_sym.TabIndex = 29;
@@ -64,7 +70,7 @@ partial class Form1
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 150);
+            this.label5.Location = new System.Drawing.Point(12, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(290, 15);
             this.label5.TabIndex = 28;
@@ -72,7 +78,7 @@ partial class Form1
             // 
             // no_copy
             // 
-            this.no_copy.Location = new System.Drawing.Point(93, 109);
+            this.no_copy.Location = new System.Drawing.Point(93, 108);
             this.no_copy.Name = "no_copy";
             this.no_copy.Size = new System.Drawing.Size(75, 23);
             this.no_copy.TabIndex = 24;
@@ -82,7 +88,7 @@ partial class Form1
             // 
             // yes_copy
             // 
-            this.yes_copy.Location = new System.Drawing.Point(12, 109);
+            this.yes_copy.Location = new System.Drawing.Point(12, 108);
             this.yes_copy.Name = "yes_copy";
             this.yes_copy.Size = new System.Drawing.Size(75, 23);
             this.yes_copy.TabIndex = 23;
@@ -93,16 +99,16 @@ partial class Form1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 91);
+            this.label3.Location = new System.Drawing.Point(12, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(394, 15);
+            this.label3.Size = new System.Drawing.Size(372, 15);
             this.label3.TabIndex = 22;
-            this.label3.Text = "Add/Remove robocopy/cut and background robopaste in context menu?";
+            this.label3.Text = "Add/Remove robocopy and background robopaste in context menu?";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 36);
+            this.label2.Location = new System.Drawing.Point(12, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(245, 15);
             this.label2.TabIndex = 21;
@@ -111,7 +117,7 @@ partial class Form1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 7);
+            this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(295, 15);
             this.label1.TabIndex = 20;
@@ -119,7 +125,7 @@ partial class Form1
             // 
             // remove_rmdir
             // 
-            this.remove_rmdir.Location = new System.Drawing.Point(93, 54);
+            this.remove_rmdir.Location = new System.Drawing.Point(93, 53);
             this.remove_rmdir.Name = "remove_rmdir";
             this.remove_rmdir.Size = new System.Drawing.Size(75, 23);
             this.remove_rmdir.TabIndex = 19;
@@ -129,7 +135,7 @@ partial class Form1
             // 
             // yes_rmdir
             // 
-            this.yes_rmdir.Location = new System.Drawing.Point(12, 54);
+            this.yes_rmdir.Location = new System.Drawing.Point(12, 53);
             this.yes_rmdir.Name = "yes_rmdir";
             this.yes_rmdir.Size = new System.Drawing.Size(75, 23);
             this.yes_rmdir.TabIndex = 18;
@@ -141,18 +147,80 @@ partial class Form1
             // 
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(-2, 28);
+            this.label4.Location = new System.Drawing.Point(-2, 27);
             this.label4.MaximumSize = new System.Drawing.Size(0, 1);
             this.label4.MinimumSize = new System.Drawing.Size(290, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(419, 1);
             this.label4.TabIndex = 31;
             // 
+            // no_note
+            // 
+            this.no_note.Location = new System.Drawing.Point(93, 224);
+            this.no_note.Name = "no_note";
+            this.no_note.Size = new System.Drawing.Size(75, 23);
+            this.no_note.TabIndex = 34;
+            this.no_note.Text = "Remove";
+            this.no_note.UseVisualStyleBackColor = true;
+            this.no_note.Click += new System.EventHandler(this.no_note_Click);
+            // 
+            // yes_note
+            // 
+            this.yes_note.Location = new System.Drawing.Point(12, 224);
+            this.yes_note.Name = "yes_note";
+            this.yes_note.Size = new System.Drawing.Size(75, 23);
+            this.yes_note.TabIndex = 33;
+            this.yes_note.Text = "Add";
+            this.yes_note.UseVisualStyleBackColor = true;
+            this.yes_note.Click += new System.EventHandler(this.yes_note_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 206);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(294, 15);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Add/Remove open file with notepad in context menu?";
+            // 
+            // no_compact
+            // 
+            this.no_compact.Location = new System.Drawing.Point(93, 279);
+            this.no_compact.Name = "no_compact";
+            this.no_compact.Size = new System.Drawing.Size(75, 23);
+            this.no_compact.TabIndex = 37;
+            this.no_compact.Text = "Remove";
+            this.no_compact.UseVisualStyleBackColor = true;
+            // 
+            // yes_compact
+            // 
+            this.yes_compact.Location = new System.Drawing.Point(12, 279);
+            this.yes_compact.Name = "yes_compact";
+            this.yes_compact.Size = new System.Drawing.Size(75, 23);
+            this.yes_compact.TabIndex = 36;
+            this.yes_compact.Text = "Add";
+            this.yes_compact.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 261);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(256, 15);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Add/Remove compact folder in context menu?";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 206);
+            this.ClientSize = new System.Drawing.Size(410, 314);
+            this.Controls.Add(this.no_compact);
+            this.Controls.Add(this.yes_compact);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.no_note);
+            this.Controls.Add(this.yes_note);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.no_sym);
             this.Controls.Add(this.yes_sym);
@@ -168,7 +236,7 @@ partial class Form1
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
-            this.Text = "File-Tools Form";
+            this.Text = "File-Tools Settings";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -188,4 +256,10 @@ partial class Form1
     private Button remove_rmdir;
     private Button yes_rmdir;
     private Label label4;
+    private Button no_note;
+    private Button yes_note;
+    private Label label6;
+    private Button no_compact;
+    private Button yes_compact;
+    private Label label7;
 }

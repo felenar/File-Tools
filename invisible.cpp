@@ -1,20 +1,37 @@
 //compile with -mwindows
-/*arguments should be "cut  " or "copy " "1" "C:\...\test\" */
+/*arguments should be "cut  " or "copy " "1" "C:\...\test\" 
+or "paste" "1 or 2" "C:\...\test" */
 #include <string>
 #include <fstream>
-#include <iostream>
+#include <iostream> //
+#include <windows.h>
 
 int main(int argc, char **argv) {
-    if(argv[1] == "cut  " || argv[1] == "copy ") {
-        std::ofstream file ("slot" + std::string(argv[2]) + ".txt");
-        file << argv[3] + std::string(argv[4]);
+    std::string check = argv[1];
+    std::string dir = argv[0];
+    if (dir[dir.length() - 1] == '\"')
+        dir = dir.substr(1, dir.length() - 2);
+    dir = dir.substr(0, dir.length() - 13);
+
+    if(check == "copy") {
+        std::ofstream file (dir + argv[2] + ".txt");
+        file << std::string(argv[3]);
         file.close();
-    } else if(argv[1] == "paste") { //why doesnt this work
-        std::ifstream file ("slot" + std::string(argv[2]) + ".txt");
+    } if(check == "paste") {        
+        std::ifstream file (dir + argv[2] + ".txt");
         std::string contents;
-        file >> contents;
-        std::cout << contents << '\n';
+        std::getline(file, contents);
         file.close();
-    }
-    return 0;
+
+        std::string folderDir = argv[3] + contents.substr(contents.find_last_of('\\'));
+        std::cout << folderDir << std::endl;
+
+        CreateDirectoryA(folderDir.c_str(), 0);
+        std::string command = "robocopy.exe \"" + contents + "\" \"" + folderDir + "\" /E";
+        system(command.c_str());    
+         
+        //ShellExecute(0, "runas", command.c_str().substr(0,12), command.c_str().substr(13), 0, SW_SHOWNORMAL); //why doesnt this do anything
+        //ShellExecute(0, "runas", "cmd.exe", "/k " + command.c_str(), 0, SW_SHOWNORMAL);
+        // HINSTANCE result = ShellExecute(0, "runas", "notepad.exe", 0, 0, SW_SHOWNORMAL);
+    } system("pause"); return 0;
 }
