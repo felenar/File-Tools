@@ -1,8 +1,7 @@
 mkdir build
 
 g++ visible.cpp -o visible
-@REM g++ invisible.cpp -mwindows -o invisible
-g++ invisible.cpp -o invisible
+g++ invisible.cpp -mwindows -o invisible
 xcopy .\visible.exe .\build\ /Y
 xcopy .\invisible.exe .\build\ /Y
 

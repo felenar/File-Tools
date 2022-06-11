@@ -3,7 +3,6 @@
 or "paste" "1 or 2" "C:\...\test" */
 #include <string>
 #include <fstream>
-#include <iostream> //
 #include <windows.h>
 
 int main(int argc, char **argv) {
@@ -24,7 +23,6 @@ int main(int argc, char **argv) {
         file.close();
 
         std::string folderDir = argv[3] + contents.substr(contents.find_last_of('\\'));
-        std::cout << folderDir << std::endl;
 
         CreateDirectoryA(folderDir.c_str(), 0);
         std::string command = "robocopy.exe \"" + contents + "\" \"" + folderDir + "\" /E";
@@ -33,5 +31,5 @@ int main(int argc, char **argv) {
         //ShellExecute(0, "runas", command.c_str().substr(0,12), command.c_str().substr(13), 0, SW_SHOWNORMAL); //why doesnt this do anything
         //ShellExecute(0, "runas", "cmd.exe", "/k " + command.c_str(), 0, SW_SHOWNORMAL);
         // HINSTANCE result = ShellExecute(0, "runas", "notepad.exe", 0, 0, SW_SHOWNORMAL);
-    } system("pause"); return 0;
+    } return 0;
 }
