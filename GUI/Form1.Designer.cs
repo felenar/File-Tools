@@ -72,9 +72,9 @@ partial class Form1
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 149);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(290, 15);
+            this.label5.Size = new System.Drawing.Size(311, 15);
             this.label5.TabIndex = 28;
-            this.label5.Text = "Add/Remove folder symlink creator in context menu?";
+            this.label5.Text = "Add/Remove folder/file symlink creator in context menu?";
             // 
             // no_copy
             // 

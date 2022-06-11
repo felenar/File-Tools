@@ -96,12 +96,15 @@ public partial class Form1 : Form
     {
         string location = System.Reflection.Assembly.GetEntryAssembly().Location;
         string dir = '\"' + location.Substring(0, location.LastIndexOf("GUI.dll")) + "sym.exe\"" + " \"%1\"";
-        reg(true, true, "Batch Symlink", new[] { "Symlink", "Symlink but copy executables" }, new[] { dir, dir + " \"copy\"" }, "Directory", "%SystemRoot%\\System32\\shell32.dll,-16806", "Top");
+        reg(true, true, "Symlink", new[] { "Batch Symlink", "Batch Symlink but copy executables", "Symlink" }, new[] { dir, dir + " \"copy\"", dir + " \"singleD\"" }, "Directory", "%SystemRoot%\\System32\\shell32.dll,-16806", "Top");
+        reg(true, false, "Symlink", new[] { "Symlink" }, new[] { dir +" \"singleF\"" }, "*", "%SystemRoot%\\System32\\shell32.dll,-16806", "Middle");
     }
 
     private void no_sym_Click(object sender, EventArgs e)
     {
-        try { reg(false, true, "Batch Symlink", null, null, "Directory", null, null);  } catch(Exception) { /* add a notification of some kind here */};
+        try { reg(false, true, "Batch Symlink", null, null, "Directory", null, null);  
+        reg(false, false, "Symlink", null, null, "*", null, null);
+        } catch(Exception) { /* add a notification of some kind here */};
     }
 
     private void yes_note_Click(object sender, EventArgs e)
