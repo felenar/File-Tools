@@ -26,7 +26,7 @@ int main(int argc, char **argv) {
         if (!(folderDir.find('\\') != std::string::npos)) folderDir = folderDir.substr(0, 2);
         folderDir = folderDir + contents.substr(contents.find_last_of('\\'));
 
-        std::string command = "robocopy.exe \"" + contents + "\" " + folderDir + " /E";        
+        std::string command = "robocopy.exe \"" + contents + "\" " + folderDir + " /E /sl";        
         system(command.c_str());    
          
         //ShellExecute(0, "runas", command.c_str().substr(0,12), command.c_str().substr(13), 0, SW_SHOWNORMAL); //why doesnt this do anything
