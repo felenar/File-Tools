@@ -22,10 +22,11 @@ int main(int argc, char **argv) {
         std::getline(file, contents);
         file.close();
 
-        std::string folderDir = argv[3] + contents.substr(contents.find_last_of('\\'));
+        std::string folderDir = argv[3];
+        if (!(folderDir.find('\\') != std::string::npos)) folderDir = folderDir.substr(0, 2);
+        folderDir = folderDir + contents.substr(contents.find_last_of('\\'));
 
-        CreateDirectoryA(folderDir.c_str(), 0);
-        std::string command = "robocopy.exe \"" + contents + "\" \"" + folderDir + "\" /E";
+        std::string command = "robocopy.exe \"" + contents + "\" " + folderDir + " /E";        
         system(command.c_str());    
          
         //ShellExecute(0, "runas", command.c_str().substr(0,12), command.c_str().substr(13), 0, SW_SHOWNORMAL); //why doesnt this do anything

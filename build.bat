@@ -14,3 +14,7 @@ cd ..\..\..\..\sym
 dotnet build
 cd bin\Debug\net6.0-windows
 xcopy *.* ..\..\..\..\build\ /Y
+
+cd ..\..\..\..
+xcopy win11notepad.ico .\build\ /Y
+xcopy win11settings.ico .\build\ /Y

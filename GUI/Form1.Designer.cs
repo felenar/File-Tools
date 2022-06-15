@@ -28,6 +28,7 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
+            this.components = new System.ComponentModel.Container();
             this.no_sym = new System.Windows.Forms.Button();
             this.yes_sym = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@ partial class Form1
             this.no_compact = new System.Windows.Forms.Button();
             this.yes_compact = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // no_sym
@@ -191,6 +193,7 @@ partial class Form1
             this.no_compact.TabIndex = 37;
             this.no_compact.Text = "Remove";
             this.no_compact.UseVisualStyleBackColor = true;
+            this.no_compact.Click += new System.EventHandler(this.no_compact_Click);
             // 
             // yes_compact
             // 
@@ -200,6 +203,7 @@ partial class Form1
             this.yes_compact.TabIndex = 36;
             this.yes_compact.Text = "Add";
             this.yes_compact.UseVisualStyleBackColor = true;
+            this.yes_compact.Click += new System.EventHandler(this.yes_compact_Click);
             // 
             // label7
             // 
@@ -209,6 +213,11 @@ partial class Form1
             this.label7.Size = new System.Drawing.Size(256, 15);
             this.label7.TabIndex = 35;
             this.label7.Text = "Add/Remove compact folder in context menu?";
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
             // 
             // Form1
             // 
@@ -262,4 +271,5 @@ partial class Form1
     private Button no_compact;
     private Button yes_compact;
     private Label label7;
+    private NotifyIcon notifyIcon1;
 }

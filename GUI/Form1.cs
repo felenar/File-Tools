@@ -64,7 +64,10 @@ public partial class Form1 : Form
 
     private void Form1_Load(object sender, EventArgs e)
     {
-
+        notifyIcon1.Text = "File-Tools Settings";
+        notifyIcon1.Icon = new System.Drawing.Icon("win11settings.ico");
+        notifyIcon1.BalloonTipText = "Entry already removed";
+        notifyIcon1.Visible = true;
     }
 
     private void yes_rmdir_Click(object sender, EventArgs e)
@@ -74,7 +77,10 @@ public partial class Form1 : Form
 
     private void remove_rmdir_Click(object sender, EventArgs e)
     {
-        try { reg(false, false, "RMDIR", null, null, "Directory", null, null); } catch(Exception) { /* add a notification of some kind here */};
+        try { reg(false, false, "RMDIR", null, null, "Directory", null, null); } catch(Exception)
+        {
+             notifyIcon1.ShowBalloonTip(1);
+        };
     }
 
     private void yes_copy_Click(object sender, EventArgs e)
@@ -88,15 +94,19 @@ public partial class Form1 : Form
 
     private void no_copy_Click(object sender, EventArgs e)
     {
-        try{ reg(false, true, "Robocopy", new[] { "Copy 1", "Copy 2"}, null, "Directory", null, null); } catch (Exception) { /* add a notification of some kind here */};
-        try{ reg(false, true, "Robopaste", new[] { "Paste 1", "Paste 2" }, null, "Directory\\Background", null, null); } catch(Exception) { /* add a notification of some kind here */};
+        try{ reg(false, true, "Robocopy", new[] { "Copy 1", "Copy 2"}, null, "Directory", null, null);
+        reg(false, true, "Robopaste", new[] { "Paste 1", "Paste 2" }, null, "Directory\\Background", null, null); } 
+        catch(Exception)
+        {
+             notifyIcon1.ShowBalloonTip(1);
+        };
     }
 
     private void yes_sym_Click(object sender, EventArgs e)
     {
         string location = System.Reflection.Assembly.GetEntryAssembly().Location;
-        string dir = '\"' + location.Substring(0, location.LastIndexOf("GUI.dll")) + "sym.exe\"" + " \"%1\"";
-        reg(true, true, "Symlink", new[] { "Batch Symlink", "Batch Symlink but copy executables", "Symlink" }, new[] { dir, dir + " \"copy\"", dir + " \"singleD\"" }, "Directory", "%SystemRoot%\\System32\\shell32.dll,-16806", "Top");
+        string dir = '\"' + location.Substring(0, location.LastIndexOf("GUI.dll")) + "sym.exe\" \"%1\"";
+        reg(true, true, "Symlink", new[] { "Batch Symlink", "Batch Symlink but copy executables", "Symlink" }, new[] { dir + " \"0\"", dir + " \"copy\"", dir + " \"singleD\"" }, "Directory", "%SystemRoot%\\System32\\shell32.dll,-16806", "Top");
         reg(true, false, "Symlink", new[] { "Symlink" }, new[] { dir +" \"singleF\"" }, "*", "%SystemRoot%\\System32\\shell32.dll,-16806", "Middle");
     }
 
@@ -104,16 +114,37 @@ public partial class Form1 : Form
     {
         try { reg(false, true, "Batch Symlink", null, null, "Directory", null, null);  
         reg(false, false, "Symlink", null, null, "*", null, null);
-        } catch(Exception) { /* add a notification of some kind here */};
+        } catch(Exception)
+        {
+             notifyIcon1.ShowBalloonTip(1);
+        };
     }
 
     private void yes_note_Click(object sender, EventArgs e)
     {
-        reg(true, false, "Open with Notepad", null, new[] { "notepad.exe %1" }, "*", "notepad.exe,0", "Top");
+        string location = System.Reflection.Assembly.GetEntryAssembly().Location;
+        string dir = location.Substring(0, location.LastIndexOf("GUI.dll")) + "win11notepad.ico";
+        reg(true, false, "Open with Notepad", null, new[] { "notepad.exe %1" }, "*", dir, "Middle");
     }
 
     private void no_note_Click(object sender, EventArgs e)
     {
-        try { reg(false, false, "Open with Notepad", null, null, "*", null, null); } catch (Exception) { /* add a notification of some kind here */};
+        try { reg(false, false, "Open with Notepad", null, null, "*", null, null); } catch (Exception) {
+        notifyIcon1.ShowBalloonTip(1); };
+    }
+
+    private void yes_compact_Click(object sender, EventArgs e)
+    {
+        reg(true, false, "Compact", null, new[] { "compact.exe \"%1\\*.*\" /Q /C /S" }, "Directory", "%systemroot%\\system32\\imageres.dll,-175", "Middle");
+    }
+
+    private void no_compact_Click(object sender, EventArgs e)
+    {
+        try { reg(false, false, "Compact", null, null, "Directory", null, null);
+        }
+        catch (Exception)
+        {
+             notifyIcon1.ShowBalloonTip(1);
+        };
     }
 }
