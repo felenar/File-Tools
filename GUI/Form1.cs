@@ -112,7 +112,7 @@ public partial class Form1 : Form
 
     private void no_sym_Click(object sender, EventArgs e)
     {
-        try { reg(false, true, "Batch Symlink", null, null, "Directory", null, null);  
+        try { reg(false, true, "Symlink", null, null, "Directory", null, null);  
         reg(false, false, "Symlink", null, null, "*", null, null);
         } catch(Exception)
         {
@@ -145,6 +145,27 @@ public partial class Form1 : Form
         catch (Exception)
         {
              notifyIcon1.ShowBalloonTip(1);
+        };
+    }
+
+    private void yes_path_Click(object sender, EventArgs e)
+    {
+        string dir = '\"' + System.Reflection.Assembly.GetEntryAssembly().Location.Substring(0, System.Reflection.Assembly.GetEntryAssembly().Location.LastIndexOf("GUI.dll")) + "invisible.exe\"";
+        reg(true, false, "Add to PATH", new[] { "Add to PATH" }, new[] { dir + " \"path\" \"%1\"" }, "Directory", "%SystemRoot%\\System32\\shell32.dll,-16773", "Middle");
+        reg(true, false, "Add to PATH", new[] { "Add to PATH" }, new[] { dir + " \"path\" \"%w\"" }, "Directory\\Background", "%SystemRoot%\\System32\\shell32.dll,-16773", "Middle");
+
+    }
+
+    private void no_path_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            reg(false, false, "Compact", null, null, "Directory", null, null);
+            reg(false, false, "Compact", null, null, "Directory\\Background", null, null);
+        }
+        catch (Exception)
+        {
+            notifyIcon1.ShowBalloonTip(1);
         };
     }
 }

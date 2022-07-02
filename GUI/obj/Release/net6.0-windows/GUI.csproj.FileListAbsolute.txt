@@ -1,0 +1,17 @@
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\bin\Release\net6.0-windows\GUI.exe
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\bin\Release\net6.0-windows\GUI.deps.json
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\bin\Release\net6.0-windows\GUI.runtimeconfig.json
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\bin\Release\net6.0-windows\GUI.dll
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\bin\Release\net6.0-windows\GUI.pdb
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\obj\Release\net6.0-windows\GUI.csproj.AssemblyReference.cache
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\obj\Release\net6.0-windows\GUI.Form1.resources
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\obj\Release\net6.0-windows\GUI.csproj.GenerateResource.cache
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\obj\Release\net6.0-windows\GUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\obj\Release\net6.0-windows\GUI.AssemblyInfoInputs.cache
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\obj\Release\net6.0-windows\GUI.AssemblyInfo.cs
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\obj\Release\net6.0-windows\GUI.csproj.CoreCompileInputs.cache
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\obj\Release\net6.0-windows\GUI.dll
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\obj\Release\net6.0-windows\refint\GUI.dll
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\obj\Release\net6.0-windows\GUI.pdb
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\obj\Release\net6.0-windows\GUI.genruntimeconfig.cache
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\GUI\obj\Release\net6.0-windows\ref\GUI.dll

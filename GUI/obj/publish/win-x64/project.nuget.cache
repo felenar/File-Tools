@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "dS/Mxx1+8s16r/4gWDWu5sv7jDzbC5nWciBV/pJT6Pd1mHLk6FSyxkM/OneAl9Bg5IYnahmuCvoWo/8ZFlv+Yw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\darth\\Desktop\\Coding\\Projects\\File-Tools\\GUI\\GUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\darth\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.6\\microsoft.netcore.app.runtime.win-x64.6.0.6.nupkg.sha512",
+    "C:\\Users\\darth\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.6\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.6.nupkg.sha512",
+    "C:\\Users\\darth\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.6\\microsoft.aspnetcore.app.runtime.win-x64.6.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}

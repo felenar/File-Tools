@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "SJ4GegxLVbChj8AcVbSyBoMgBP3UQ0hex/eqClOLioIgWM7xfpfSFHv652R2vD9D8N/p/gLD4k/tz0Na2jd+Wg==",
+  "dgSpecHash": "oyrPt/da3LY/itMROtW/Kblk+Pw0DHasPnqLeR2gB2MPaz9FwnNuyPiXj5+VKtYrBxm8fI+khjXeNq4Cgg93/w==",
   "success": true,
   "projectFilePath": "C:\\Users\\darth\\Desktop\\Coding\\Projects\\File-Tools\\GUI\\GUI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\darth\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.5\\microsoft.netcore.app.ref.6.0.5.nupkg.sha512",
+    "C:\\Users\\darth\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.5\\microsoft.windowsdesktop.app.ref.6.0.5.nupkg.sha512",
+    "C:\\Users\\darth\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.5\\microsoft.aspnetcore.app.ref.6.0.5.nupkg.sha512",
+    "C:\\Users\\darth\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.5\\microsoft.netcore.app.host.win-x64.6.0.5.nupkg.sha512"
+  ],
   "logs": []
 }

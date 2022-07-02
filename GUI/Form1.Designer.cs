@@ -47,6 +47,9 @@ partial class Form1
             this.yes_compact = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.no_path = new System.Windows.Forms.Button();
+            this.yes_path = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // no_sym
@@ -219,11 +222,43 @@ partial class Form1
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
+            // no_path
+            // 
+            this.no_path.Location = new System.Drawing.Point(93, 335);
+            this.no_path.Name = "no_path";
+            this.no_path.Size = new System.Drawing.Size(75, 23);
+            this.no_path.TabIndex = 40;
+            this.no_path.Text = "Remove";
+            this.no_path.UseVisualStyleBackColor = true;
+            this.no_path.Click += new System.EventHandler(this.no_path_Click);
+            // 
+            // yes_path
+            // 
+            this.yes_path.Location = new System.Drawing.Point(12, 335);
+            this.yes_path.Name = "yes_path";
+            this.yes_path.Size = new System.Drawing.Size(75, 23);
+            this.yes_path.TabIndex = 39;
+            this.yes_path.Text = "Add";
+            this.yes_path.UseVisualStyleBackColor = true;
+            this.yes_path.Click += new System.EventHandler(this.yes_path_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 317);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(343, 15);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Add/Remove add folder/background to PATH in context menu?";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 314);
+            this.ClientSize = new System.Drawing.Size(410, 370);
+            this.Controls.Add(this.no_path);
+            this.Controls.Add(this.yes_path);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.no_compact);
             this.Controls.Add(this.yes_compact);
             this.Controls.Add(this.label7);
@@ -272,4 +307,7 @@ partial class Form1
     private Button yes_compact;
     private Label label7;
     private NotifyIcon notifyIcon1;
+    private Button no_path;
+    private Button yes_path;
+    private Label label8;
 }
