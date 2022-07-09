@@ -4,8 +4,8 @@ or "paste" "1 or 2" "C:\...\test" */
 #include <string>
 #include <fstream>
 #include <windows.h>
-#include <stringapiset.h>
-
+//#include <stringapiset.h>
+//#include <strsafe.h>
 
 int main(int argc, char **argv) {
     std::string check = argv[1];
@@ -15,7 +15,7 @@ int main(int argc, char **argv) {
     dir = dir.substr(0, dir.length() - 13);
 
     if(check == "copy") {
-        std::ofstream file (dir + argv[2] + ".txt");
+        std::ofstream file(dir + argv[2] + ".txt");
         file << std::string(argv[3]);
         file.close();
     } if(check == "paste") {        
@@ -35,8 +35,19 @@ int main(int argc, char **argv) {
         //ShellExecute(0, "runas", "cmd.exe", "/k " + command.c_str(), 0, SW_SHOWNORMAL);
         // HINSTANCE result = ShellExecute(0, "runas", "notepad.exe", 0, 0, SW_SHOWNORMAL);
     } if(check == "path") {
-        std::string cmd = "%windir%\\System32\\setx.exe PATH \"%PATH%;";
-        cmd = cmd + argv[2] + "\"";
-        system((cmd).c_str());
+        HKEY key;
+        DWORD value_length;
+        RegOpenKey(HKEY_CURRENT_USER, "Environment",&key);
+        RegQueryValueEx(key, "Path", NULL, 0, 0, &value_length);
+    	TCHAR * tvalue = new TCHAR [value_length + sizeof(argv[2]) + 1];
+        RegQueryValueEx(key, "Path", NULL, 0, (LPBYTE)tvalue, &value_length);
+
+        std::string svalue = tvalue;
+        svalue = svalue + ';';
+        svalue = svalue + argv[2];
+
+        RegSetValueExA(key, "Path", 0, REG_EXPAND_SZ, (const BYTE*)svalue.c_str(), svalue.length());
+        RegCloseKey(key);
+        delete[] tvalue;
     } return 0;
 }
