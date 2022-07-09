@@ -4,6 +4,8 @@ g++ visible.cpp -o visible
 g++ invisible.cpp -mwindows -o invisible
 xcopy .\visible.exe .\build\ /Y
 xcopy .\invisible.exe .\build\ /Y
+del .\visible.exe
+del .\invisible.exe
 
 cd GUI
 dotnet build
@@ -17,4 +19,3 @@ xcopy *.* ..\..\..\..\build\ /Y
 
 cd ..\..\..\..
 xcopy win11notepad.ico .\build\ /Y
-xcopy win11settings.ico .\build\ /Y

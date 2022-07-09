@@ -64,10 +64,7 @@ public partial class Form1 : Form
 
     private void Form1_Load(object sender, EventArgs e)
     {
-        notifyIcon1.Text = "File-Tools Settings";
-        notifyIcon1.Icon = new System.Drawing.Icon("win11settings.ico");
-        notifyIcon1.BalloonTipText = "Entry already removed";
-        notifyIcon1.Visible = true;
+
     }
 
     private void yes_rmdir_Click(object sender, EventArgs e)
@@ -79,7 +76,7 @@ public partial class Form1 : Form
     {
         try { reg(false, false, "RMDIR", null, null, "Directory", null, null); } catch(Exception)
         {
-             notifyIcon1.ShowBalloonTip(1);
+
         };
     }
 
@@ -98,7 +95,7 @@ public partial class Form1 : Form
         reg(false, true, "Robopaste", new[] { "Paste 1", "Paste 2" }, null, "Directory\\Background", null, null); } 
         catch(Exception)
         {
-             notifyIcon1.ShowBalloonTip(1);
+
         };
     }
 
@@ -116,7 +113,7 @@ public partial class Form1 : Form
         reg(false, false, "Symlink", null, null, "*", null, null);
         } catch(Exception)
         {
-             notifyIcon1.ShowBalloonTip(1);
+
         };
     }
 
@@ -130,7 +127,7 @@ public partial class Form1 : Form
     private void no_note_Click(object sender, EventArgs e)
     {
         try { reg(false, false, "Open with Notepad", null, null, "*", null, null); } catch (Exception) {
-        notifyIcon1.ShowBalloonTip(1); };
+         };
     }
 
     private void yes_compact_Click(object sender, EventArgs e)
@@ -142,10 +139,7 @@ public partial class Form1 : Form
     {
         try { reg(false, false, "Compact", null, null, "Directory", null, null);
         }
-        catch (Exception)
-        {
-             notifyIcon1.ShowBalloonTip(1);
-        };
+        catch (Exception){};
     }
 
     private void yes_path_Click(object sender, EventArgs e)
@@ -165,7 +159,25 @@ public partial class Form1 : Form
         }
         catch (Exception)
         {
-            notifyIcon1.ShowBalloonTip(1);
+            
+        };
+    }
+
+    private void yes_batch_Click(object sender, EventArgs e)
+    {
+        RegistryKey reg = Registry.ClassesRoot.CreateSubKey(".bat\\ShellNew\\");
+        reg.SetValue("NullFile", "1");
+    }
+
+    private void no_batch_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            Registry.ClassesRoot.DeleteSubKey(".bat\\ShellNew\\");
+        }
+        catch (Exception)
+        {
+
         };
     }
 }

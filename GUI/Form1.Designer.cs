@@ -28,7 +28,6 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-            this.components = new System.ComponentModel.Container();
             this.no_sym = new System.Windows.Forms.Button();
             this.yes_sym = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,10 +45,12 @@ partial class Form1
             this.no_compact = new System.Windows.Forms.Button();
             this.yes_compact = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.no_path = new System.Windows.Forms.Button();
             this.yes_path = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.no_batch = new System.Windows.Forms.Button();
+            this.yes_batch = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // no_sym
@@ -217,11 +218,6 @@ partial class Form1
             this.label7.TabIndex = 35;
             this.label7.Text = "Add/Remove compact folder in context menu?";
             // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
-            // 
             // no_path
             // 
             this.no_path.Location = new System.Drawing.Point(93, 335);
@@ -251,11 +247,43 @@ partial class Form1
             this.label8.TabIndex = 38;
             this.label8.Text = "Add/Remove add folder/background to PATH in context menu?";
             // 
+            // no_batch
+            // 
+            this.no_batch.Location = new System.Drawing.Point(93, 393);
+            this.no_batch.Name = "no_batch";
+            this.no_batch.Size = new System.Drawing.Size(75, 23);
+            this.no_batch.TabIndex = 43;
+            this.no_batch.Text = "Remove";
+            this.no_batch.UseVisualStyleBackColor = true;
+            this.no_batch.Click += new System.EventHandler(this.no_batch_Click);
+            // 
+            // yes_batch
+            // 
+            this.yes_batch.Location = new System.Drawing.Point(12, 393);
+            this.yes_batch.Name = "yes_batch";
+            this.yes_batch.Size = new System.Drawing.Size(75, 23);
+            this.yes_batch.TabIndex = 42;
+            this.yes_batch.Text = "Add";
+            this.yes_batch.UseVisualStyleBackColor = true;
+            this.yes_batch.Click += new System.EventHandler(this.yes_batch_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 375);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(273, 15);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Add/Remove batch file to New File context menu?";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 370);
+            this.ClientSize = new System.Drawing.Size(410, 429);
+            this.Controls.Add(this.no_batch);
+            this.Controls.Add(this.yes_batch);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.no_path);
             this.Controls.Add(this.yes_path);
             this.Controls.Add(this.label8);
@@ -306,8 +334,10 @@ partial class Form1
     private Button no_compact;
     private Button yes_compact;
     private Label label7;
-    private NotifyIcon notifyIcon1;
     private Button no_path;
     private Button yes_path;
     private Label label8;
+    private Button no_batch;
+    private Button yes_batch;
+    private Label label9;
 }
