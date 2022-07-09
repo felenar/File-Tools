@@ -175,9 +175,6 @@ public partial class Form1 : Form
         {
             Registry.ClassesRoot.DeleteSubKey(".bat\\ShellNew\\");
         }
-        catch (Exception)
-        {
-
-        };
+        catch (Exception){};
     }
 }
