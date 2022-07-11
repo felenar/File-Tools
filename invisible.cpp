@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
         RegCloseKey(key);
         delete[] tvalue;
 
-        //tell windows that path variable has changed
+        //tell open windows that path variable has changed
         SendMessageTimeout(HWND_BROADCAST,WM_SETTINGCHANGE, 0, (LPARAM)TEXT("Environment"), 0, 1000, 0);
     } return 0;
 }
