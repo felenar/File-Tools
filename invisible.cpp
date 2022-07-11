@@ -54,7 +54,7 @@ int main(int argc, char **argv) {
         svalue = svalue + ';';
         svalue = svalue + argv[2];
 
-        //set the path and clean up
+        //set the path and clean up variables
         RegSetValueExA(key, "Path", 0, REG_EXPAND_SZ, (const BYTE*)svalue.c_str(), svalue.length());
         RegCloseKey(key);
         delete[] tvalue;
