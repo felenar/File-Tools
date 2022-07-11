@@ -1,0 +1,2 @@
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\gui\bin\Release\net6.0-windows\win-x64\publish\GUI.pdb
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\gui\bin\Release\net6.0-windows\win-x64\publish\GUI.exe

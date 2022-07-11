@@ -1,0 +1,2 @@
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\bin\Release\net6.0-windows\win-x64\publish\sym.pdb
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\bin\Release\net6.0-windows\win-x64\publish\sym.exe

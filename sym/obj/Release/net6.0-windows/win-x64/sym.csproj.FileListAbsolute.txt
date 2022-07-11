@@ -1,0 +1,15 @@
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\bin\Release\net6.0-windows\win-x64\sym.exe
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\bin\Release\net6.0-windows\win-x64\sym.deps.json
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\bin\Release\net6.0-windows\win-x64\sym.runtimeconfig.json
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\bin\Release\net6.0-windows\win-x64\sym.dll
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\bin\Release\net6.0-windows\win-x64\sym.pdb
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Release\net6.0-windows\win-x64\sym.csproj.AssemblyReference.cache
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Release\net6.0-windows\win-x64\sym.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Release\net6.0-windows\win-x64\sym.AssemblyInfoInputs.cache
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Release\net6.0-windows\win-x64\sym.AssemblyInfo.cs
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Release\net6.0-windows\win-x64\sym.csproj.CoreCompileInputs.cache
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Release\net6.0-windows\win-x64\sym.dll
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Release\net6.0-windows\win-x64\refint\sym.dll
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Release\net6.0-windows\win-x64\sym.pdb
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Release\net6.0-windows\win-x64\sym.genruntimeconfig.cache
+C:\Users\darth\Desktop\Coding\Projects\File-Tools\sym\obj\Release\net6.0-windows\win-x64\ref\sym.dll
